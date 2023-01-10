@@ -22,7 +22,7 @@ jobs:
           project: cloudtype-ex/react
           yaml: |-
             name: react-sample
-            app: vite-react
+            app: react-vite
             options:
               git:
                 ref: ${{ github.ref }}
