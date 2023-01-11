@@ -8,25 +8,25 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: HWAK-IN
         uses: actions/checkout@v2
-      - name: Connect repository
+      - name: YEON-GYEOL
         uses: cloudtype-github-actions/connect@v1
         with:
           token: ${{ secrets.CLOUDTYPE_TOKEN }}
           ghtoken: ${{ secrets.GHP_TOKEN }}
           scope: cloudtype-ex
-      - name: Deploy
+      - name: BAE-PO
         uses: cloudtype-github-actions/deploy@v1
         with:
           token: ${{ secrets.CLOUDTYPE_TOKEN }}
-          project: cloudtype-ex/react
+          project: cloudtype-ex/react-abc
           yaml: |-
-            name: react-sample
+            name: vite-react
             app: web
             options:
               git:
                 ref: ${{ github.ref }}
                 url: git@github.com:${{ github.repository }}.git
-              nodeversion: 16
+              nodeversion: 14
               docbase: /dist
