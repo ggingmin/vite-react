@@ -25,8 +25,10 @@ jobs:
             name: vite-react
             app: web
             options:
+              nodeversion: "14"
+              docbase: /dist
+            context:
               git:
                 ref: ${{ github.ref }}
                 url: git@github.com:${{ github.repository }}.git
-              nodeversion: 14
-              docbase: /dist
+
